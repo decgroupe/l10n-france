@@ -16,7 +16,6 @@
         'l10n_fr_base_address_city_department',
     ],
     'data': ['view/res_city.xml', ],
-    'force_post_init_hook': True,
     'post_init_hook': 'set_department_and_state_on_res_city',
     'installable': True,
 }
