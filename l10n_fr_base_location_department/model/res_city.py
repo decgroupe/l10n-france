@@ -19,4 +19,6 @@ class ResCity(models.Model):
         domain = []
         if self.state_id:
             domain = [("state_id", "=", self.state_id.id)]
+            if not self.country_id:
+                self.country_id = self.state_id.country_id
         return {"domain": {"department_id": domain}}
